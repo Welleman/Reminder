@@ -6,7 +6,6 @@ settings = Settings()
 
 @app.get("/")
 def read_root():
-    print(f'APP name - {settings.app_name}')
-    return {"Hello": "World"}
+    return {"app_name": settings.app_name}
 
     
