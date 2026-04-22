@@ -17,5 +17,8 @@ pydantic-settings
 PyJWT==2.12.1
 python-multipart==0.0.20
 
+# --- password hashing library ---
+passlib[bcrypt]
+
 # --- Environment Variables ---
 python-dotenv==1.2.2
