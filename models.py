@@ -89,7 +89,7 @@ class User(Base):
     @property
     def has_permission(self, perm_name:str)->bool:
         ''' Проверяет, есть ли у пользователь конкретная роль '''
-        return perm_name in self.get_all_permissions
+        return perm_name in self.get_all_permissions()
 
 class Role(Base):
     __tablename__ = "roles"
@@ -195,7 +195,7 @@ class RevokedToken(Base):
     revoked_at = Column(DateTime(timezone=True), onupdate=func.now())
     expires_at = Column(DateTime(timezone=True), nullable=False)
 
-class AudiLog(Base):
+class AuditLog(Base):
     """Лог действий пользователей для безопасности"""
     __tablename__ = "audit_logs"
 

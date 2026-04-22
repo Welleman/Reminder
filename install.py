@@ -7,7 +7,7 @@ from sqlalchemy import select
 from passlib.hash import pbkdf2_sha256 as pass256
 
 from database import async_engine, AssyncSessionLocal
-from models import User, Reminder, Role, Permission, NotificationLog, RevokedToken, AudiLog, Base
+from models import User, Reminder, Role, Permission, NotificationLog, RevokedToken, AuditLog, Base
 
 async def init_database():
     ''' Создание таблиц в БД '''
