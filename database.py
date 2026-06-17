@@ -3,7 +3,7 @@ from config.settings import settings
 
 async_engine = create_async_engine(
     settings.db_url_asynpg,
-    echo=True,
+    echo=False, # Если нужен полный лог, то True
     future=True
 )
 
